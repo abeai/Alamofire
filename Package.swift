@@ -25,14 +25,14 @@
 
 import PackageDescription
 
-let package = Package(name: "Alamofire",
+let package = Package(name: "Alamofire-AbeAIFork",
                       platforms: [.macOS(.v10_12),
                                   .iOS(.v10),
                                   .tvOS(.v10),
                                   .watchOS(.v3)],
-                      products: [.library(name: "Alamofire",
-                                          targets: ["Alamofire"])],
-                      targets: [.target(name: "Alamofire",
+                      products: [.library(name: "Alamofire-AbeAIFork",
+                                          targets: ["Alamofire-AbeAIFork"])],
+                      targets: [.target(name: "Alamofire-AbeAIFork",
                                         path: "Source",
                                         linkerSettings: [.linkedFramework("CFNetwork",
                                                                           .when(platforms: [.iOS,
@@ -40,6 +40,6 @@ let package = Package(name: "Alamofire",
                                                                                             .tvOS,
                                                                                             .watchOS]))]),
                                 .testTarget(name: "AlamofireTests",
-                                            dependencies: ["Alamofire"],
+                                            dependencies: ["Alamofire-AbeAIFork"],
                                             path: "Tests")],
                       swiftLanguageVersions: [.v5])
